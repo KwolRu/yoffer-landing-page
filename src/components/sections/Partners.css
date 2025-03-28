@@ -1,0 +1,118 @@
+.logo-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: calc(100% - 80px);
+    position: relative;
+    cursor: grab;
+    margin: 0 auto;
+}
+
+.logo-flex:active {
+    cursor: grabbing;
+}
+
+.logo-container {
+    display: flex;
+    width: max-content;
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+}
+
+.logo-container.dragging {
+    transition: none;
+}
+
+.logo{
+    background-color: var(--gray-100);
+    border-radius: 250px;
+    flex-shrink: 0;
+    padding: 20px;
+    width: 172px;
+    transition: 0.3s;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.logo.active {
+    background-color: var(--gray-200);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.logo img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    transition: 0.3s;
+    max-height: 100%;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    will-change: transform;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transform: translate3d(0,0,0);
+}
+
+.partners {
+  padding: 40px 0;
+}
+
+.swiper-slide-active .logo {
+  height: 80px;
+}
+
+
+/* Swiper slide sizing */
+.swiper-slide {
+  width: auto;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+  transform: translate3d(0,0,0);
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .partners {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  
+  .partners h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    margin: 20px;
+    text-align: center;
+    width: 100%;
+    color: var(--gray-600);
+  }
+}

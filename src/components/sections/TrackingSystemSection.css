@@ -1,0 +1,42 @@
+.tracking-system-section {
+  padding: 40px 0;
+  background-color: white;
+}
+
+
+
+.tracking-text .card {
+  text-align: center;
+  background: var(--gray-50);
+  border-radius: 40px;
+  padding: 20px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.tracking-text .card p {
+  line-height: normal;
+  color: var(--gray-600);
+}
+
+@media (min-width: 1024px) {
+  .tracking-text {
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .tracking-text .card {
+    text-align: left;
+    padding: 0px;
+    background-color: white;
+  }
+  .tracking-text .card p {
+    line-height: normal;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+}

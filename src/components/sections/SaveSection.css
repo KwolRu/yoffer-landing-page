@@ -1,0 +1,109 @@
+.save-container {
+    padding: 50px 0;
+    background-color: var(--gray-50);
+}
+
+/* Swiper container styles */
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transform: translate3d(0,0,0);
+
+}
+
+.save-container .cards-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    cursor: grab;
+}
+
+.save-container .cards-flex:active {
+    cursor: grabbing;
+}
+
+.save-container .cards-container {
+    display: flex;
+    width: max-content;
+    gap: 8px;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.save-card {
+    border-radius: 20px;
+    padding: 16px;
+    font-weight: 400;
+    width: 328px;
+    height: 135px;
+    color: var(--gray-100);
+    background-color: var(--indigo-400);
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.save-card img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.save-card-description{
+    font-size: 13px;
+    color: var(--indigo-100);
+    line-height: normal;
+}
+
+.save-card-title{
+    font-size: 20px;
+    color: var(--indigo-50);
+    font-weight: bold;
+}
+
+.save-action{
+    margin-top: 20px;
+}
+
+/* Swiper slide sizing */
+.save-container .swiper-slide {
+    width: auto;
+    max-width: 328px;
+    transition: transform 0.3s ease;
+    transform: translate3d(0,0,0);
+    text-align: left;
+}
+
+.save-container .swiper-wrapper {
+    justify-content: flex-start; /* Force left alignment of the wrapper */
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .save-container .desktop-view.cards-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .save-container .desktop-view .cards-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 16px;
+    }
+    
+    .save-container .desktop-view .save-card {
+        width: 32%;
+        min-width: 280px;
+        margin-bottom: 16px;
+        margin: 0;
+    }
+}

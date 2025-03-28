@@ -1,0 +1,41 @@
+.user-stats-section {
+  padding: 40px 0;
+  background-color: white;
+}
+
+.stats-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.stats-number {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--indigo-400);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+
+.stats-action {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .stats-number {
+    font-size: 48px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .stats-image.desktop{
+  height: 420px;
+  }
+  .stats-image.desktop img {
+    width: 100%;
+    height: 100%;
+}
+}

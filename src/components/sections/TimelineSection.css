@@ -1,0 +1,192 @@
+.timeline-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+/* Базовая (мобильная) верстка */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 3rem 0;
+  position: relative;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background-color: var(--indigo-50);
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-number {
+  background-color: var(--indigo-50);
+  color: var(--indigo-400);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 2;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.timeline-content p {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.timeline-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.timeline-image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.timeline-action {
+  text-align: center;
+}
+
+.purple-card {
+  background-color: var(--indigo-400);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+.info-card-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.info-card-content p {
+  font-size: 14px;
+  color: var(--indigo-100);
+  line-height: 110%;
+}
+
+
+@media (min-width: 1024px) {
+  .timeline {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+
+  }
+
+     .timeline::before {
+      top: 20px;
+      left: 0;
+      width: 100vw;
+      background-color: var(--indigo-200);
+      height: 4px;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 0;      /* Убираем нижний отступ, т.к. теперь горизонтальное размещение */
+    width: 30%;            /* Примерно 3 элемента по 30% */
+    position: relative;
+    text-align: left;    /* Чтобы текст шагов был по центру */
+  }
+
+  .timeline-content {
+    padding-left: 0;
+  }
+
+  /* Ставим кружок с номером по центру над текстом */
+  .timeline-number {
+    position: relative;
+    top: -20px;
+    width: 84px;
+    height: 84px;
+    background: var(--indigo-200);
+    color: var(--indigo-500);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+  /* Иконку/картинку можно чуть уменьшить, если нужно */
+  .timeline-image {
+    max-width: 250px;
+    margin: 1rem auto 0 auto;
+    transform: scale(2);
+}
+
+  .timeline-image img {
+    width: 100%;
+  }
+  
+  .timeline-number {
+    position: relative;
+    top: -20px; /* корректируйте при необходимости */
+  }
+
+  .timeline-action {
+    margin-top: 2rem;
+  }
+  
+  .purple-card {
+    display: flex
+;
+padding: 0;
+    justify-content: flex-end;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    background-color: var(--indigo-400);
+    justify-self: center;
+}
+.info-card-content {
+  width: 50%;
+  margin: 10px;
+  display: flex
+;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+  .info-card-content h4 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .info-card-content p {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

@@ -1,0 +1,86 @@
+.income-growth-section {
+  padding: 40px 0;
+  background-color: var(--gray-50);
+}
+
+.income-heading {
+   
+  margin-bottom: 1.5rem;
+}
+
+.income-bottom-table-card{ 
+    font-size: 12px;
+    color: var(--indigo-100);
+}
+.income-top-table-card{
+    text-align: right;
+    color: var(--indigo-500);
+    font-size: 12px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.income-card{
+    width: auto;
+    max-width: fit-content;
+}
+.income-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.income-description {
+  max-width: 800px;
+   
+}
+
+.income-description p {
+  font-size: 16px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+/* Circle grid layout similar to Features section */
+.circle-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: var(--indigo-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+}
+
+.circle h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.circle-item p {
+  color: var(--gray-600);
+  font-size: 14px;
+  line-height: 1.5;
+}

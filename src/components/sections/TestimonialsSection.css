@@ -1,0 +1,110 @@
+.testimonials-section {
+  padding: 40px 0;
+}
+
+/* Swiper container styles */
+.testimonials-swiper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transform: translate3d(0,0,0);
+}
+
+.testimonial-title {
+  color: var(--indigo-500);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.20;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card {
+  background-color: var(--gray-50);
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 3px solid var(--indigo-100);
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-author h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.testimonial-position {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+/* Swiper slide styling */
+.testimonials-swiper .swiper-slide {
+  width: auto;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  transform: translate3d(0,0,0);
+  text-align: left;
+  height: auto;
+  padding: 10px;
+}
+
+/* Desktop specific styles */
+@media (min-width: 992px) {
+  .testimonials-swiper .swiper-slide {
+    max-width: 400px;
+  }
+  
+  .testimonials-swiper .swiper-wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Media queries for responsive behavior */
+@media (max-width: 991px) {
+  .testimonial-card {
+    padding: 24px;
+  }
+}
