@@ -1,16 +1,8 @@
 .save-container {
     padding: 50px 0;
-    background-color: var(--gray-50);
 }
 
-/* Swiper container styles */
-.swiper-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    transform: translate3d(0,0,0);
 
-}
 
 .save-container .cards-flex {
     display: flex;
@@ -19,11 +11,6 @@
     overflow: hidden;
     width: 100%;
     position: relative;
-    cursor: grab;
-}
-
-.save-container .cards-flex:active {
-    cursor: grabbing;
 }
 
 .save-container .cards-container {
@@ -38,7 +25,7 @@
     border-radius: 20px;
     padding: 16px;
     font-weight: 400;
-    width: 328px;
+    width: 100%;
     height: 135px;
     color: var(--gray-100);
     background-color: var(--indigo-400);
@@ -47,6 +34,30 @@
     margin-right: 10px;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
+    
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animation states for cards */
+.animate .save-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation delays */
+.animate .card-1 {
+    transition-delay: 0.1s;
+}
+
+.animate .card-2 {
+    transition-delay: 0.3s;
+}
+
+.animate .card-3 {
+    transition-delay: 0.5s;
 }
 
 .save-card img {
@@ -69,12 +80,22 @@
 
 .save-action{
     margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.7s;
+}
+
+.animate + .save-action,
+.animate ~ .save-action {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Swiper slide sizing */
 .save-container .swiper-slide {
     width: auto;
-    max-width: 328px;
+    max-width: 100%;
     transition: transform 0.3s ease;
     transform: translate3d(0,0,0);
     text-align: left;

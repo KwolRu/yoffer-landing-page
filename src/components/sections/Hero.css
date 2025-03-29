@@ -1,25 +1,22 @@
-#home .container {
+.hero-section .container {
+
   height: 100%;
   display: flex;
-  
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 .hero-section {
-  height: 100vh;
+   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 80px; /* Account for fixed header */
-  padding-bottom: 0px ;
+  padding-top: 80px;
+  /* Account for fixed header */
+  padding-bottom: 0px;
   color: var(--gray-800);
 }
 
-.hero-content {
-  text-align: left;
-}
 
 .hero-content h1 {
   font-size: 24px;
@@ -42,45 +39,53 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter:drop-shadow( var(--shadow-indigo));
+  filter: drop-shadow(var(--shadow-indigo));
   position: relative;
-
-
 }
-.img-anim{
+
+.img-anim {
   animation: standart 1s ease-in-out forwards;
 }
+
 .hero-chat {
   position: absolute;
-  bottom: 20px;
-  width: 400px;
+  bottom: 30px;
+  width: calc(100% - 80px);
+  justify-self: center;
+  z-index: 2;
   justify-self: anchor-center;
 }
 
 .left_chat_anim {
+  position: relative;
   left: -400px;
   animation: left_chat_anim 1s ease-in-out forwards;
 }
+
 @keyframes standart {
   0% {
-   opacity: 0;
+    opacity: 0;
   }
+
   100% {
     opacity: 1;
-  } 
+  }
 }
+
 @keyframes left_chat_anim {
   0% {
     left: 400px;
     opacity: 0;
     bottom: -100px;
   }
+
   100% {
-    left: 20px;
+    left: 0px;
     opacity: 1;
     bottom: 0px;
-  } 
+  }
 }
+
 .right_chat_anim {
   left: -400px;
   animation: right_chat_anim 1s ease-in-out forwards;
@@ -92,12 +97,14 @@
     opacity: 0;
     bottom: -100px;
   }
+
   100% {
-    left: 20px;
+    left: 0px;
     opacity: 1;
     bottom: 0px;
   }
 }
+
 /* Add styles for larger screens */
 @media (min-width: 1024px) {
   .hero-section {
@@ -110,22 +117,34 @@
     height: auto;
     overflow: visible;
     align-items: center;
-}
+  }
 
+  .hero-section {
+    height: auto;
 
+ }
   .hero-content {
     justify-content: center;
     height: auto;
   }
+
   .hero-content h1 {
     font-size: 64px;
     font-weight: 600;
   }
 
-
+  .hero-content {
+    text-align: left;
+    margin-top: 64px;
+  }
+  .hero-chat {
+    position: absolute;
+    bottom: 20px;
+    width: 340px;
+    justify-self: anchor-center;
+  }
 
   .hero-image img {
     transform: scale(1.1);
   }
 }
-

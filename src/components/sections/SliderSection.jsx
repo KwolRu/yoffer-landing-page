@@ -115,16 +115,7 @@ const SliderSection = () => {
         )}
       </div>
       
-      {isMobile && (
-        <div className="slider-indicator">
-          {images.map((_, index) => (
-            <div 
-              key={index} 
-              className={`indicator-dot ${index === currentIndex ? 'active' : ''}`}
-            />
-          ))}
-        </div>
-      )}
+     
       
       <div className="slider-action">
         <button className="button button-primary button-large ">Создать резюме</button>

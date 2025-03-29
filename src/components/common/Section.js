@@ -1,5 +1,4 @@
 import React from 'react';
-import './Section.css';
 
 const Section = ({ children, id, className = '', background = 'light' }) => {
   return (

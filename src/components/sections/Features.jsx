@@ -5,7 +5,7 @@ import './Features.css';
 const Features = () => {
   return (
     <Section id="features" className="features-section" background="light">
-      <div className="container row">
+      <div className="container row flex-mobile">
       <div>
         <h2 className="section-title">80%</h2>
         <p className='description'>пользователи <span className='accent'> получают отклики </span> от работодателей уже в <span className='accent'>первый день</span> размещения резюме</p>

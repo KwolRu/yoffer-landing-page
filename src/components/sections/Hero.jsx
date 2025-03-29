@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Section id="hero" className="hero-section" background="primary">
       <div className="hero-content">
-        <h1> <span className='accent'>Бесплатно</span> составим резюме, которое заметят работодатели за <span className='accent'>15 мин</span></h1>
+        <h1 className='col'> <span><span className='accent'>Бесплатно</span> составим</span><span> резюме, которое заметят</span> <span>работодатели за <span className='accent'>15 мин</span></span></h1>
         <div className="hero-buttons">
           <Button size="small">Составить резюме</Button>
           <Button type="secondary">Войти</Button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './SaveSection.css';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +11,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const SaveSection = () => {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef(null);
   
   // Check if we're on desktop
   useEffect(() => {
@@ -23,6 +26,30 @@ const SaveSection = () => {
     
     return () => window.removeEventListener('resize', checkIfDesktop);
   }, []);
+  
+  // Animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+          // Animation will trigger once and not repeat on subsequent views
+        }
+      },
+      { threshold: 0.3 } // Trigger when 30% of the element is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
   
   // Sample saving benefits data
   const savingBenefits = [
@@ -44,16 +71,18 @@ const SaveSection = () => {
   ];
 
   return (
-    <section className="save-container">
+    <section className="save-container" ref={sectionRef}>
       <div className="container">
         <h3 className="section-title"><span className='accent'>Yoffer</span> экономит ваше время и деньги</h3>
       
-      
       {isDesktop ? (
-        <div className="cards-flex desktop-view">
+        <div className={`cards-flex desktop-view ${isVisible ? 'animate' : ''}`}>
           <div className="cards-container">
-            {savingBenefits.map((benefit) => (
-              <div key={`benefit-${benefit.id}`} className="save-card">
+            {savingBenefits.map((benefit, index) => (
+              <div 
+                key={`benefit-${benefit.id}`} 
+                className={`save-card card-${index + 1}`}
+              >
                 <p className='save-card-title'>{benefit.title}</p>
                 <p className='save-card-description'>{benefit.description}</p>
                 <div className='save-icon'>
@@ -64,7 +93,7 @@ const SaveSection = () => {
           </div>
         </div>
       ) : (
-        <div className="swiper-container">
+        <div className={`swiper-container ${isVisible ? 'animate' : ''}`}>
           <Swiper
             slidesPerView={'auto'}
             spaceBetween={8}
@@ -89,9 +118,9 @@ const SaveSection = () => {
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper"
           >
-            {savingBenefits.map((benefit) => (
+            {savingBenefits.map((benefit, index) => (
               <SwiperSlide key={`benefit-${benefit.id}`}>
-                <div className="save-card">
+                <div className={`save-card card-${index + 1}`}>
                   <p className='save-card-title'>{benefit.title}</p>
                   <p className='save-card-description'>{benefit.description}</p>
                   <div className='save-icon'>
@@ -101,7 +130,6 @@ const SaveSection = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-pagination"></div>
         </div>
       )}
       

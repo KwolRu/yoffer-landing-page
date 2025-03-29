@@ -1,6 +1,5 @@
 .timeline-section {
   padding: 40px 0;
-  background-color: #f9f9f9;
 }
 
 /* Базовая (мобильная) верстка */
@@ -24,6 +23,11 @@
   width: 4px;
   background-color: var(--indigo-50);
   z-index: 1;
+  transition: background-color 1s ease;
+}
+
+.timeline.animate::before {
+  background-color: var(--indigo-50);
 }
 
 .timeline-item {
@@ -35,8 +39,8 @@
 }
 
 .timeline-number {
-  background-color: var(--indigo-50);
-  color: var(--indigo-400);
+  background-color: var(--indigo-100);
+  color: var(--indigo-300);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -47,11 +51,47 @@
   z-index: 2;
   position: relative;
   flex-shrink: 0;
+  transition: all 0.8s ease;
+}
+
+.timeline.animate .timeline-item:nth-child(1) .timeline-number {
+  background-color: var(--indigo-50);
+  color: var(--indigo-400);
+  transition-delay: 0.2s;
+}
+
+.timeline.animate .timeline-item:nth-child(2) .timeline-number {
+  background-color: var(--indigo-50);
+  color: var(--indigo-400);
+  transition-delay: 0.8s;
+}
+
+.timeline.animate .timeline-item:nth-child(3) .timeline-number {
+  background-color: var(--indigo-50);
+  color: var(--indigo-400);
+  transition-delay: 1.4s;
 }
 
 .timeline-content {
   padding-left: 1.5rem;
   text-align: left;
+  opacity: 0.7;
+  transition: opacity 0.8s ease;
+}
+
+.timeline.animate .timeline-item:nth-child(1) .timeline-content {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.timeline.animate .timeline-item:nth-child(2) .timeline-content {
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+.timeline.animate .timeline-item:nth-child(3) .timeline-content {
+  opacity: 1;
+  transition-delay: 1.5s;
 }
 
 .timeline-content p {
@@ -61,9 +101,9 @@
 
 .timeline-image {
   width: 100%;
-  display: flex;
   align-items: center;
 }
+
 .timeline-image img {
   width: 100%;
   object-fit: contain;
@@ -78,8 +118,10 @@
   color: white;
   border-radius: 20px;
   padding: 20px;
-  margin: 3rem auto;
-  max-width: 800px;
+  margin: 20px;
+}
+.purple-card .container{
+  padding: 0;
 }
 
 .info-card-content h4 {
@@ -104,22 +146,29 @@
 
   }
 
-     .timeline::before {
-      top: 20px;
-      left: 0;
-      width: 100vw;
-      background-color: var(--indigo-200);
-      height: 4px;
+  .timeline::before {
+    top: 20px;
+    left: 0;
+    width: 100vw;
+    background-color: var(--indigo-200);
+    height: 4px;
+  }
+  
+  .timeline.animate::before {
+    background-color: var(--indigo-200);
   }
 
   .timeline-item {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-bottom: 0;      /* Убираем нижний отступ, т.к. теперь горизонтальное размещение */
-    width: 30%;            /* Примерно 3 элемента по 30% */
+    margin-bottom: 0;
+    /* Убираем нижний отступ, т.к. теперь горизонтальное размещение */
+    width: 30%;
+    /* Примерно 3 элемента по 30% */
     position: relative;
-    text-align: left;    /* Чтобы текст шагов был по центру */
+    text-align: left;
+    /* Чтобы текст шагов был по центру */
   }
 
   .timeline-content {
@@ -132,36 +181,41 @@
     top: -20px;
     width: 84px;
     height: 84px;
-    background: var(--indigo-200);
-    color: var(--indigo-500);
+    background: var(--indigo-100);
+    color: var(--indigo-300);
     font-weight: 600;
     font-size: 32px;
-}
+  }
+  
+  .timeline.animate .timeline-item .timeline-number {
+    background: var(--indigo-200);
+    color: var(--indigo-500);
+  }
 
   /* Иконку/картинку можно чуть уменьшить, если нужно */
   .timeline-image {
     max-width: 250px;
     margin: 1rem auto 0 auto;
     transform: scale(2);
-}
+  }
 
   .timeline-image img {
     width: 100%;
   }
-  
+
   .timeline-number {
     position: relative;
-    top: -20px; /* корректируйте при необходимости */
+    top: -20px;
+    /* корректируйте при необходимости */
   }
 
   .timeline-action {
     margin-top: 2rem;
   }
-  
+
   .purple-card {
-    display: flex
-;
-padding: 0;
+    display: flex;
+    padding: 0;
     justify-content: flex-end;
     margin: 0;
     max-width: 100%;
@@ -170,21 +224,23 @@ padding: 0;
     position: relative;
     background-color: var(--indigo-400);
     justify-self: center;
-}
-.info-card-content {
-  width: 50%;
-  margin: 10px;
-  display: flex
-;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
+  }
+
+  .info-card-content {
+    width: 50%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .info-card-content h4 {
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 20px;
   }
+
   .info-card-content p {
     font-size: 16px;
     line-height: 150%;

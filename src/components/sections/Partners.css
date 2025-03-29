@@ -6,12 +6,8 @@
     overflow: hidden;
     width: calc(100% - 80px);
     position: relative;
-    cursor: grab;
-    margin: 0 auto;
-}
 
-.logo-flex:active {
-    cursor: grabbing;
+    margin: 0 auto;
 }
 
 .logo-container {
@@ -19,26 +15,28 @@
     width: max-content;
     transition: transform 0.5s ease-out;
     will-change: transform;
+    height: 100px;
 }
 
 .logo-container.dragging {
     transition: none;
 }
 
-.logo{
-    background-color: var(--gray-100);
-    border-radius: 250px;
-    flex-shrink: 0;
-    padding: 20px;
-    width: 172px;
-    transition: 0.3s;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
+.logo {
+  background-color: var(--gray-100);
+  border-radius: 250px;
+  flex-shrink: 0;
+  padding: 20px;
+  width: 172px;
+  transition: 0.3s;
+  height: 60px;
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  transition: 1s;
+  will-change: transform;
 }
 
 .logo.active {
@@ -55,25 +53,20 @@
     transition: 0.3s;
     max-height: 100%;
 }
-.swiper-wrapper {
+.partners .swiper-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     display: flex;
-    box-sizing: content-box;
-    align-items: center;
-    will-change: transform;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+}
+.partners .swiper-slide {
+  display: flex
+;
+  align-items: center;
 }
 
-.swiper-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    transform: translate3d(0,0,0);
-}
+
 
 .partners {
   padding: 40px 0;

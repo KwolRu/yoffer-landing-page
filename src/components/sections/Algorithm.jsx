@@ -43,7 +43,7 @@ const Algorithm = () => {
   ];
 
   return (
-    <section className="algorithm-container">
+    <section className="algorithm-container" id="algorithm">
       <div className="container">
         <h3 className="section-title accent">Алгоритм обучен профессиональными рекрутерами и HR</h3>
       
@@ -97,7 +97,7 @@ const Algorithm = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="swiper-pagination"></div>
+          
           </div>
         )}
       </div>

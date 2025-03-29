@@ -26,6 +26,14 @@
   --gray-800: #1F2937;
 
   --shadow-indigo: 0px 0px 30px color-mix(in srgb, var(--indigo-400), transparent 60%);
+  
+  /* Add scroll behavior for smooth scrolling globally */
+  --scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+  scroll-padding-top: 80px; /* Account for fixed header height */
 }
 
 body {
@@ -36,12 +44,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .reverse{
   flex-direction: row-reverse;
   display: flex;
 }
-
+img{
+  pointer-events: none;
+}
 /* Typography */
 h1,
 h2,
@@ -84,7 +95,7 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 section{
   overflow: hidden;
@@ -106,14 +117,13 @@ section{
 }
 
 /* Header & Navigation */
-header {
-  background-color: var(--light-bg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transform: translate3d(0,0,0);
+}
 .accent {
   color: var(--indigo-500);
 }
@@ -159,6 +169,10 @@ h3.section-title {
 .flex{
   display: flex;
 }
+.flex-mobile{
+  display: flex;
+  flex-wrap: wrap;
+}
 /* Media Queries for screens larger than 1024px */
 @media screen and (min-width: 1024px) {
   .desktop{ 
@@ -177,6 +191,10 @@ h3.section-title {
     padding: 0 20px;
 ;
 }
+.flex-mobile{
+  display: flex;
+  flex-wrap: nowrap;
+}
 .description{
   font-size: 24px;
   line-height: normal;
@@ -185,6 +203,7 @@ h3.section-title {
   width: 90%;
 
 }
+
 .right {
   align-items: flex-end;
   display: flex
@@ -210,19 +229,7 @@ h3.section-title {
   }
   
   
-  /* Layout adjustments */
-  .row {
-    margin: 0 -1.5rem;
-  }
-  
-  .col {
-    padding: 0 1.5rem;
-  }
-  
-  /* Header & Navigation */
-  .nav {
-    padding: 2rem 0;
-  }
+ 
 }
 
 /* For extra large screens */

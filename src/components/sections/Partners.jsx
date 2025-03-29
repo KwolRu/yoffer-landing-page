@@ -50,7 +50,7 @@ const Partners = () => {
         <h3 className='section-title'>С нашими резюме люди устраиваются в лучшие компании</h3>
       </div>
       
-      <div className="swiper-container">
+      <div className="swiper-container logo-container">
         <Swiper
           slidesPerView={'auto'}
           spaceBetween={10}

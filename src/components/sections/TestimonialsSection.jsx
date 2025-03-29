@@ -125,7 +125,6 @@ const TestimonialsSection = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className="swiper-pagination"></div>
                 </div>
             </div>
         </div>

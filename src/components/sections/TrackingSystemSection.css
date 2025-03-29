@@ -3,11 +3,21 @@
   background-color: white;
 }
 
+.tracking-image {
+  transform: translateY(-300px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.8s ease-out;
+  visibility: hidden;
+}
 
+.tracking-image.animated {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
 
 .tracking-text .card {
   text-align: center;
-  background: var(--gray-50);
   border-radius: 40px;
   padding: 20px;
   font-weight: 500;
@@ -38,5 +48,5 @@
     line-height: normal;
     color: var(--gray-600);
     font-weight: 500;
-}
+  }
 }
