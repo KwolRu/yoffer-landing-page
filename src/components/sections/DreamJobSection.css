@@ -4,13 +4,14 @@
 
 .dream-job-intro p {
   font-size: 18px;
-  color: var(--gray-600);
+  color: var(--gray-500);
+  line-height: normal;
   font-weight: 500;
 }
 
 .section-subtitle {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--gray-800);
   margin-bottom: 2rem;
 }
@@ -53,7 +54,7 @@
 
 .dream-card .card-title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
 }
 
@@ -87,7 +88,7 @@
 }
 
 /* Desktop styles */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .desktop-view.cards-flex {
     display: flex;
     flex-direction: column;
@@ -97,21 +98,54 @@
   .dream-job-section .desktop-view .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-wrap: wrap;
-    justify-content: flex-start;
     width: 100%;
     gap: 10px;
   }
-  .dream-job-section .container{
+  
+  .dream-job-section .container {
     display: flex;
     gap: 80px;
   }
-  .dream-job-section .section-subtitle{
+  
+  .dream-job-section .section-subtitle {
     font-size: 52px;
   }
+  
   .desktop-view .dream-card {
-    min-width: 220px;
-    margin-bottom: 16px;
+    min-width: 284px;
+    height: 162px;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .dream-job-section .container {
+    display: flex;
+    gap: 80px;
+  }
+  
+  .dream-job-section .section-subtitle {
+    font-size: 52px;
+  }
+  
+  .desktop-view.cards-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .desktop-view .cards-container {
+    display: flex
+;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+  
+  .desktop-view .dream-card {
+    min-width: 284px;
+    height: 118px;
     margin: 0;
   }
 }

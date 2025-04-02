@@ -7,6 +7,7 @@
 .feature-card {
   display: flex;
   padding: 0;
+  margin-left: 10px;
   flex-direction: row;
   flex-wrap: nowrap;
   position: relative;
@@ -26,7 +27,7 @@
   }
 
   100% {
-    background-color: var(--indigo-500);
+    background-color: var(--indigo-400);
     opacity: 1;
     transform: scale(1);
   }
@@ -67,6 +68,7 @@
   color: var(--indigo-500);
   position: absolute;
   left: -100px;
+  font-weight: 500;
   top: 100px;
 }
 
@@ -78,7 +80,7 @@
 #features.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
 
@@ -113,14 +115,20 @@
   
 
   .left-table-card {
-    left: -120px;
+    left: -80px;
     font-size: 1.2rem;
     top: 194px;
 }
-
-  
+  .feature-card {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .col-50{
+    width: 50%;
+  }
   .bottom-table-card {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 1.2rem;
+    font-weight: 500;
   }
 }

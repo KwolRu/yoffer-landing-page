@@ -42,11 +42,14 @@
 .algorithm-card p {
     font-size: 18px;
     margin-bottom: 12px;
+
+    font-weight: 500;
 }
 
 /* Swiper slide sizing */
-.swiper-slide {
-    width: auto;
+ .algorithm-container .swiper-slide {
+    min-width: 328px;
+    width: 100%;
     max-width: 328px;
     transition: transform 0.3s ease;
     transform: translate3d(0,0,0);

@@ -1,8 +1,11 @@
 .user-stats-section {
   padding: 40px 0;
-  background-color: white;
+  
 }
-
+.user-stats-section .container {
+  background-color: var(--gray-50);
+  padding-top: 60px;
+}
 .stats-content {
   margin: 0 auto;
   display: flex;

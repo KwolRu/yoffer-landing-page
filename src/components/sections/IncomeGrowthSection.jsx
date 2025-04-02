@@ -24,17 +24,17 @@ const IncomeGrowthSection = () => {
 
     return (
         <div className="income-growth-section">
-            <div className="container row flex-mobile">
-                <div>
+            <div className="container row flex-mobile full">
+                <div className='col-50'>
                     <div className="income-heading">
                         <h2 className="section-title">10-20%</h2>
                         <h3 className="description">рост уровня дохода</h3>
                     </div>
                     <div className="income-description desktop">
-                        <p><span className='accent'>Yoffer</span> умеет выделять ваши сильные стороны и структурировать резюме так, чтоб работодатель увидел ваше конкурентное преимущество и предложил зарплату выше</p>
+                        <p className='col'><span><span className='accent'>Yoffer</span> умеет выделять ваши сильные стороны и структурировать</span> <span>резюме так, чтоб работодатель увидел ваше конкурентное</span><span> преимущество и предложил зарплату выше</span></p>
                     </div>
                 </div>
-                <div className=" income-card">
+                <div className="col-50 income-card">
                     <p className='income-top-table-card'>доход, который вы теряете</p>
                     <div className="cir-grid">
                         {Array.from({ length: 5 }).map((_, index) => (

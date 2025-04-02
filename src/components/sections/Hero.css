@@ -58,13 +58,13 @@
 
 .left_chat_anim {
   position: relative;
-  left: -400px;
+
   animation: left_chat_anim 1s ease-in-out forwards;
 }
 
 @keyframes standart {
   0% {
-    opacity: 0;
+    opacity: 0.6;
   }
 
   100% {
@@ -74,34 +74,26 @@
 
 @keyframes left_chat_anim {
   0% {
-    left: 400px;
-    opacity: 0;
-    bottom: -100px;
+    opacity: 0.6;
   }
 
   100% {
-    left: 0px;
     opacity: 1;
-    bottom: 0px;
   }
 }
 
 .right_chat_anim {
-  left: -400px;
+  left: 0px;
   animation: right_chat_anim 1s ease-in-out forwards;
 }
 
 @keyframes right_chat_anim {
   0% {
-    left: -400px;
-    opacity: 0;
-    bottom: -100px;
+    opacity: 0.6;
   }
 
   100% {
-    left: 0px;
     opacity: 1;
-    bottom: 0px;
   }
 }
 

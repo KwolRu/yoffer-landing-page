@@ -16,16 +16,17 @@ const TestimonialsSection = () => {
             id: 1,
             name: "Анастасия",
             position: "UX/UI-дизайнер",
-            title: "«Работодатели просматривали резюме, но не перезванивали»",
-            text_before: "отправила свое резюме в 7 компаний, перезвонили только из одной. И те оказались мошенниками",
-            text_after: "сделала резюме при помощи «Прозрачности» под 5 разных компаний. От 4-х из них получила приглашения на собеседования. В одной из них теперь работаю"
+            avatar: "/img/photo/anastasia.png", // Add avatar path
+            title: "«Работодатели просматривали резюме, но не перезванивали»",
+            text_before: "отправила свое резюме в 7 компаний, перезвонили только из одной. И те оказались мошенниками",
+            text_after: "сделала резюме при помощи «Прозрачности» под 5 разных компаний. От 4-х из них получила приглашения на собеседования. В одной из них теперь работаю"
         },
-
         {
             id: 2,
             name: "Игорь",
             position: "Project-менеджер",
-            title: "«Мне нужно было срочно найти работу»",
+            avatar: "/img/photo/igor.png", // Add avatar path
+            title: "«Мне нужно было срочно найти работу»",
             text_before: "Мне нужно было срочно найти работу",
             text_after: "создал резюме при помощи «Прозрачности», разместил в открытом доступе. Пока искал вакансии, на которые хотел бы откликнуться, мне стали сами звонить работодатели. В итоге нашел работу меньше, чем за неделю"
         },
@@ -33,7 +34,8 @@ const TestimonialsSection = () => {
             id: 3,
             name: "Елена",
             position: "Бухгалтер",
-            title: "«Работа давно не устраивала, но написать резюме никак не доходили руки»",
+            avatar: "/img/photo/elena.png", // Add avatar path
+            title: "«Работа давно не устраивала, но написать резюме никак не доходили руки»",
             text_before: "обстановка на работе просто ужас. Каждый день думала «уволюсь». Но что писать в резюме? Кому я нужна?! Если бы не Yoffer, так и сидела бы там",
             text_after: "я, честно говоря, офигела от того, как меня описал алгоритм! Сама бы такого сотрудника наняла за двойную плату) Итог — работаю сейчас на новом месте, где меня ценят, уважают и платят в 1,5 раза больше"
         },
@@ -41,8 +43,9 @@ const TestimonialsSection = () => {
             id: 4,
             name: "Андрей",
             position: "Коммерческий директор",
+            avatar: "/img/photo/andrey.png", // Add avatar path
 
-            title: "«Претендовал на зп 300+ на ТОПовую позицию, долго не было откликов»",
+            title: "«Претендовал на зп 300+ на ТОПовую позицию, долго не было откликов»",
             text_before: "претендовал на позицию коммерческого директора. Самостоятельно искал около полугода. Откликов почти ноль",
             text_after: "алгоритм отлично упаковал мои знания и навыки. Так что я даже решил повысить планку зарплатных ожиданий и, как ни странно, нашел новую работу, где мне готовы столько платить"
         },
@@ -50,13 +53,11 @@ const TestimonialsSection = () => {
             id: 5,
             name: "Ксения",
             position: "SMM-специалист",
-
+            avatar: "/img/photo/ksenia.png", // Add avatar path
             title: "«Работодатель повысил зарплату»",
             text_before: "меня постоянно перегружали и при этом не доплачивали за это. Я решила найти новую работу",
             text_after: "получилось классное резюме. Уже через 1,5 недели у меня был офер от нового работодателя. Пошла увольняться, но начальник меня не отпустил. Сказал, что без меня тут все рухнет. Поднял мне зарплату и больше не дергает по выходным"
         }
-
-
     ];
 
     const [isMobile, setIsMobile] = useState(false);
@@ -112,8 +113,13 @@ const TestimonialsSection = () => {
                                 <div className="testimonial-card">
                                     <div className="testimonial-header">
                                         <div className="testimonial-author">
-                                            <h4>{testimonial.name}</h4>
-                                            <p className="testimonial-position">{testimonial.position}</p>
+                                            <div className="author-info">
+                                                <h4>{testimonial.name}</h4>
+                                                <p className="testimonial-position">{testimonial.position}</p>
+                                            </div>
+                                            <div className="testimonial-avatar">
+                                                <img src={testimonial.avatar || "/img/photo/default-avatar.png"} alt={`Avatar of ${testimonial.name}`} />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="testimonial-title">
@@ -125,6 +131,7 @@ const TestimonialsSection = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                    <button className="button button-primary button-large "><div>Создать резюме</div><img src="/img/svg/arrow-right_up.svg" alt="" /></button>
                 </div>
             </div>
         </div>

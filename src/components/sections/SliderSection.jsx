@@ -118,7 +118,7 @@ const SliderSection = () => {
      
       
       <div className="slider-action">
-        <button className="button button-primary button-large ">Создать резюме</button>
+      <button className="button button-primary button-large "><div>Создать резюме</div><img src="/img/svg/arrow-right_up.svg" alt="" /></button>
       </div>
       </div>
     </div>

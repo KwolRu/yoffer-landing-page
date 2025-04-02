@@ -56,17 +56,23 @@ const SaveSection = () => {
     {
       id: 1,
       title: "5 000 – 10 000 ₽",
-      description: <>Именно столько стоит работа профессиональных консультантов, которую <span className='light-accent'>Yoffer</span> сделает для вас за 15 минут <span className='light-accent'>бесплатно</span>!</>,
+      description: <>
+        <span>Именно столько стоит работа</span> <span> профессиональных консультантов, </span><span>которую <span className='light-accent'>Yoffer</span> сделает </span> <span> для вас за 15 минут <span className='light-accent'> бесплатно!</span></span>
+      </>
     },
     {
       id: 2,
       title: "1-3 месяца",
-      description: <>Столько длится поиск работы при обычном подходе. С <span className='light-accent'>Yoffer</span> он сократится до <span className='light-accent'>1-3 месяцев'</span></>, 
+      description: <>
+        <span>Столько длится поиск работы</span> <span> при обычном подходе. С <span className='light-accent'>Yoffer</span></span> <span> он сократится до <span className='light-accent'>1-3 недель </span></span>
+      </>
     },
     {
       id: 3,
       title: "от 1,5 часов",
-      description: <>Именно столько времени уходит в среднем на <span className='light-accent'>написание одного резюме</span>. Чтобы посчитать реальную экономию, умножьте это время на количество вакансий</>
+      description: <>
+        <span>Именно столько времени уходит</span> <span> в среднем на <span className='light-accent'>написание одного</span></span> <span><span className='light-accent'>резюме. Чтобы посчитать реальную</span></span> <span>экономию, умножьте это время</span><span> на количество вакансий </span>
+        </>
     }
   ];
 
@@ -84,7 +90,8 @@ const SaveSection = () => {
                 className={`save-card card-${index + 1}`}
               >
                 <p className='save-card-title'>{benefit.title}</p>
-                <p className='save-card-description'>{benefit.description}</p>
+                <p className='save-card-description col'>{benefit.description}</p>
+                
                 <div className='save-icon'>
                   <img src="/img/svg/save.svg" alt="" />
                 </div>
@@ -120,13 +127,16 @@ const SaveSection = () => {
           >
             {savingBenefits.map((benefit, index) => (
               <SwiperSlide key={`benefit-${benefit.id}`}>
-                <div className={`save-card card-${index + 1}`}>
-                  <p className='save-card-title'>{benefit.title}</p>
-                  <p className='save-card-description'>{benefit.description}</p>
-                  <div className='save-icon'>
-                    <img src="/img/svg/save.svg" alt="" />
-                  </div>
-                </div>
+            <div className={`save-card card-${index + 1}`}>
+              <p className='save-card-title'>{benefit.title}</p>
+              <p
+              className="save-card-description"
+              dangerouslySetInnerHTML={{ __html: benefit.description }}
+            />
+              <div className='save-icon'>
+                <img src="/img/svg/save.svg" alt="" />
+              </div>
+            </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -134,12 +144,12 @@ const SaveSection = () => {
       )}
       
       <div className="save-action">
-          <button className="button button-primary button-large">Попробовать бесплатно</button>
-        </div>
+      <button className="button button-primary button-large "><div>Попробовать бесплатно</div><img src="/img/svg/arrow-right_up.svg" alt="" /></button>
+      </div>
       </div>
     </section>
   );
 };
 
-export default SaveSection;
 
+export default SaveSection;

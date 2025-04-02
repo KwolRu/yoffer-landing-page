@@ -71,6 +71,9 @@
     color: var(--indigo-100);
     line-height: normal;
 }
+.save-card-description span::after{
+    margin-top: -6px;
+}
 
 .save-card-title{
     font-size: 20px;
@@ -126,5 +129,7 @@
         min-width: 280px;
         margin-bottom: 16px;
         margin: 0;
+        padding: 28px 24px;
+        height: 176px;
     }
 }

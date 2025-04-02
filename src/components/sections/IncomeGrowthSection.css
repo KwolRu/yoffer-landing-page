@@ -1,14 +1,17 @@
 .income-growth-section {
   padding: 40px 0;}
 
-.income-heading {
-   
-  margin-bottom: 1.5rem;
+  .income-heading {
+    display: flex
+;
+    flex-direction: column;
 }
 
 .income-bottom-table-card{ 
     font-size: 12px;
-    color: var(--indigo-100);
+    color: var(--indigo-200);
+    font-weight: 500;
+    margin-top: 5px;
 }
 .income-top-table-card{
     text-align: right;
@@ -16,6 +19,8 @@
     font-size: 12px;
     margin-bottom: 0px;
     width: 100%;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 .income-card{
     width: auto;
@@ -23,7 +28,7 @@
 }
 .income-title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--gray-800);
 }
 
@@ -36,6 +41,7 @@
   font-size: 16px;
   color: var(--gray-600);
   font-weight: 500;
+  margin-top: 40px;
 }
 
 /* Circle grid layout similar to Features section */
@@ -73,7 +79,7 @@
 
 .circle h4 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1rem;
 }
 

@@ -38,7 +38,7 @@ const Algorithm = () => {
     },
     {
       id: 3,
-      title: "Привлечет работодателей уже через несколько часов",
+      title: "<span>Привлечет работодателей</span> <span>уже через несколько часов</span>",
     }
   ];
 
@@ -52,7 +52,7 @@ const Algorithm = () => {
             <div className="cards-container">
               {algorithmSteps.map((step) => (
                 <div key={`step-${step.id}`} className="algorithm-card">
-                  <p>{step.title}</p>
+                  <p className='col' dangerouslySetInnerHTML={{ __html: step.title }}></p>
                   <div className='like'>
                     <img src="/img/svg/like.svg" alt="" />
                   </div>
@@ -89,7 +89,7 @@ const Algorithm = () => {
               {algorithmSteps.map((step) => (
                 <SwiperSlide key={`step-${step.id}`}>
                   <div className="algorithm-card">
-                    <p>{step.title}</p>
+                    <p dangerouslySetInnerHTML={{ __html: step.title }}></p>
                     <div className='like'>
                       <img src="/img/svg/like.svg" alt="" />
                     </div>

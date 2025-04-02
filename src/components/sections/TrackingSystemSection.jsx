@@ -35,11 +35,11 @@ const TrackingSystemSection = () => {
       <div className="container">
         <div className="tracking-content row full">
           <div className="tracking-text">
-            <h3 className="section-title">Адаптация под систему отслеживания резюме</h3>
+            <h3 className="section-title col adapt_word"><span>Адаптация</span> <span>под систему</span> <span>отслеживания</span> <span>резюме</span></h3>
             <div className='card'>
-              <p>
-                Многие работодатели используют специальные программы, которые «фильтруют»
-                резюме по ключевым словам. Без них HR ваше резюме может даже не увидеть.
+              <p className='col'>
+                <span>Многие работодатели используют специальные</span> <span>программы, которые «фильтруют»
+                резюме</span> <span>по ключевым словам. Без них HR ваше резюме</span> <span>может даже не увидеть.</span>
               </p>
             </div>
             <div className='card'>

@@ -12,7 +12,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 const DreamJobSection = () => {
   const [isDesktop, setIsDesktop] = useState(false);
 
-  // Check if we're on desktop
+  // Определяем, десктоп ли
   useEffect(() => {
     const checkIfDesktop = () => {
       setIsDesktop(window.innerWidth >= 1024);
@@ -24,47 +24,51 @@ const DreamJobSection = () => {
     return () => window.removeEventListener('resize', checkIfDesktop);
   }, []);
 
-  // Sample cards data
   const cards = [
     {
       number: '1',
-      title: 'Выберите вакансию, которая вам нравится',
+      title: <><span>Выберите вакансию, которая</span><span> вам нравится</span></>,
     },
     {
       number: '2',
-      title: 'Добавьте на платформу ссылку на неё или загрузите файл',
+      title: <><span>Добавьте на платформу </span><span>ссылку на неё или загрузите файл</span></>,
     },
     {
       number: '3',
-      title: 'Алгоритм внесет необходимую информацию и адаптирует резюме под требования вакансии',
+      title: <><span>Алгоритм внесет </span><span>необходимую информацию</span><span> и адаптирует резюме</span><span> под требования вакансии</span></>,
     },
     {
       number: '4',
-      title: 'А после этого Yoffer напишет сопроводительное письмо, чтобы работодатель выбрал именно вас',
+      title: <><span>А после этого сервис</span><span> напишет сопроводительное </span><span>письмо, чтобы работодатель</span><span> выбрал именно вас</span></>,
     }
   ];
 
   return (
     <div className="dream-job-section">
       <div className="container flex-mobile">
-        <div className='left-block'>
-          <h3 className="section-title accent col"><span>Как получить</span> <span>работу мечты?</span></h3>
+        <div className='left-block col-50'>
+          <h3 className="section-title accent col">
+            <span>Как получить</span> <span>работу мечты?</span>
+          </h3>
 
           <div className="dream-job-intro">
-            <p>Чтобы ускорить поиск работы, увеличить количество откликов от работодателей, а также претендовать на более высокую оплату, создавайте отдельное резюме под каждую вакансию</p>
+            <p className='col'>
+              <span>Чтобы ускорить поиск работы, увеличить</span> <span>количество откликов от работодателей,</span> <span>а также претендовать на более высокую оплату,</span> <span>создавайте отдельное резюме под каждую</span> вакансию
+            </p>
           </div>
-
         </div>
-        <div className='right-block col'>
+
+        <div className='right-block col-50 col'>
           <h3 className="section-subtitle">Поручите это нам</h3>
 
           {isDesktop ? (
-            <div className="cards-flex desktop-view ">
+            <div className="cards-flex desktop-view">
               <div className="cards-container">
                 {cards.map((card, index) => (
                   <div className="dream-card" key={`card-${index}`}>
-                    <h4 className="card-title">{card.title}</h4>
-                    <p className="card-description">{card.description}</p>
+                    <h4 className="card-title col">
+                      {card.title}
+                    </h4>
                     <p className="card-number">{card.number}</p>
                   </div>
                 ))}
@@ -99,8 +103,9 @@ const DreamJobSection = () => {
                 {cards.map((card, index) => (
                   <SwiperSlide key={`card-${index}`}>
                     <div className="dream-card">
-                      <h4 className="card-title">{card.title}</h4>
-                      <p className="card-description">{card.description}</p>
+                    <h4 className="card-title col">
+                      {card.title}
+                    </h4>
                       <p className="card-number">{card.number}</p>
                     </div>
                   </SwiperSlide>

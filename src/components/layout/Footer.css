@@ -82,7 +82,7 @@
   .footer-bottom{
     border-top: 1px solid var(--gray-200);
     text-align: center;
-    color: var(--gray-100);
+    color: var(--gray-600);
     padding: 40px 0px;
     margin-top: 40px;
   }
@@ -90,5 +90,25 @@
     opacity: 0;
     display: none;
     margin: 10px;
+  }
+  a.mail:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--indigo-500);
+    transition: 0.3s;
+  } 
+  a.mail{
+    text-decoration: underline;
+    text-decoration-color: white;
+    transition: 0.3s;
+  }
+  .footer a p{
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--gray-500)
+  }
+ .footer a p:hover{
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--gray-800);
   }
 }

@@ -51,7 +51,7 @@
 }
 
 .nav-item a:hover {
-  color: var(--indigo-600);
+  color: var(--indigo-500);
 }
 
 
@@ -229,7 +229,8 @@ z-index: 9999;
     display: block;
     color: var(--gray-700);
     font-weight: 500;
-  }
+  } 
+
 
   .auth-buttons {
     margin: 30px 0 0;

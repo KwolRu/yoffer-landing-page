@@ -68,10 +68,11 @@ const Partners = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
+          autoplay={false}
           modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >

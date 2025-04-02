@@ -4,14 +4,13 @@ import './Features.css';
 
 const Features = () => {
   return (
-    <Section id="features" className="features-section" background="light">
+    
       <div className="container row flex-mobile">
-      <div>
+      <div className='col-50'>
         <h2 className="section-title">80%</h2>
-        <p className='description'>пользователи <span className='accent'> получают отклики </span> от работодателей уже в <span className='accent'>первый день</span> размещения резюме</p>
-
+        <p className='description col'><span>пользователи <span className='accent accent-border'> получают отклики </span></span> <span>от работодателей<span className='accent accent-border'>уже в первый день</span></span> размещения резюме</p>
       </div>
-      <div>
+      <div className='col-50'>
         <div className="feature-card col">
           <p className='left-table-card'>наши пользователи</p>
           <div className='col'>
@@ -28,7 +27,6 @@ const Features = () => {
         </div>
       </div>
       </div>
-    </Section>
   );
 };
 
