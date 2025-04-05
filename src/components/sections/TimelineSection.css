@@ -39,8 +39,8 @@
 }
 
 .timeline-number {
-  background-color: var(--indigo-100);
-  color: var(--indigo-300);
+  background-color: var(--gray-100);
+  color: var(--gray-500);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -51,25 +51,25 @@
   z-index: 2;
   position: relative;
   flex-shrink: 0;
-  transition: all 0.8s ease;
+  transition: all 1s ease;
 }
 
 .timeline.animate .timeline-item:nth-child(1) .timeline-number {
-  background-color: var(--indigo-50);
-  color: var(--indigo-400);
+  background-color: var(--indigo-100);
+  color: var(--indigo-500);
   transition-delay: 0.2s;
 }
 
 .timeline.animate .timeline-item:nth-child(2) .timeline-number {
-  background-color: var(--indigo-50);
-  color: var(--indigo-400);
-  transition-delay: 0.8s;
+  background-color: var(--indigo-100);
+  color: var(--indigo-500);
+  transition-delay: 0.6s;
 }
 
 .timeline.animate .timeline-item:nth-child(3) .timeline-number {
-  background-color: var(--indigo-50);
-  color: var(--indigo-400);
-  transition-delay: 1.4s;
+  background-color: var(--indigo-100);
+  color: var(--indigo-500);
+  transition-delay: 1s;
 }
 
 .timeline-content {
@@ -89,7 +89,7 @@
   transition-delay: 0.9s;
 }
 
-.timeline.animate .timeline-item:nth-child(3) .timeline-content {
+.timeline.anim  ate .timeline-item:nth-child(3) .timeline-content {
   opacity: 1;
   transition-delay: 1.5s;
 }
@@ -172,8 +172,14 @@
   }
 
   .timeline-content {
-    padding-left: 0;
-  }
+    padding-left: 1.5rem;
+    text-align: left;
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.8s ease;
+    top: -40px;
+    left: 80px;
+}
 
   /* Ставим кружок с номером по центру над текстом */
   .timeline-number {
@@ -237,12 +243,13 @@
 
   .info-card-content h4 {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 20px;
   }
 
   .info-card-content p {
     font-size: 16px;
+    font-weight: 500;
     line-height: 150%;
   }
 }

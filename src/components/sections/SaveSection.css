@@ -70,13 +70,14 @@
     font-size: 13px;
     color: var(--indigo-100);
     line-height: normal;
+    font-weight: 500;
 }
 .save-card-description span::after{
     margin-top: -6px;
 }
 
 .save-card-title{
-    font-size: 20px;
+    font-size: 32px;
     color: var(--indigo-50);
     font-weight: bold;
 }

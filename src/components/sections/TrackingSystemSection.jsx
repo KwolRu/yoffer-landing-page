@@ -43,7 +43,7 @@ const TrackingSystemSection = () => {
               </p>
             </div>
             <div className='card'>
-              <p className='accent'>
+              <p className='accent semibold'>
                 Наш алгоритм учитывает это при генерации
               </p>
             </div>

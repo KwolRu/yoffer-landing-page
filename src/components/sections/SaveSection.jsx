@@ -118,7 +118,7 @@ const SaveSection = () => {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             }}
-            autoplay={{
+            autoplasy={{
               delay: 3000,
               disableOnInteraction: false,
             }}
@@ -129,10 +129,7 @@ const SaveSection = () => {
               <SwiperSlide key={`benefit-${benefit.id}`}>
             <div className={`save-card card-${index + 1}`}>
               <p className='save-card-title'>{benefit.title}</p>
-              <p
-              className="save-card-description"
-              dangerouslySetInnerHTML={{ __html: benefit.description }}
-            />
+            <p className="save-card-description">{benefit.description}</p>
               <div className='save-icon'>
                 <img src="/img/svg/save.svg" alt="" />
               </div>

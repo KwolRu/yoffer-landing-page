@@ -31,7 +31,7 @@ const IncomeGrowthSection = () => {
                         <h3 className="description">рост уровня дохода</h3>
                     </div>
                     <div className="income-description desktop">
-                        <p className='col'><span><span className='accent'>Yoffer</span> умеет выделять ваши сильные стороны и структурировать</span> <span>резюме так, чтоб работодатель увидел ваше конкурентное</span><span> преимущество и предложил зарплату выше</span></p>
+                        <p className='col'><span><span className='accent accent-border'>Yoffer</span> умеет выделять ваши сильные стороны и структурировать</span> <span>резюме так, чтоб работодатель увидел ваше конкурентное</span><span> преимущество и предложил зарплату выше</span></p>
                     </div>
                 </div>
                 <div className="col-50 income-card">

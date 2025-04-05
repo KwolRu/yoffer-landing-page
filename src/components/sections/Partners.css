@@ -23,20 +23,11 @@
 }
 
 .logo {
-  background-color: var(--gray-100);
-  border-radius: 250px;
-  flex-shrink: 0;
-  padding: 20px;
+  
+  padding: 0px;
   width: 172px;
   transition: 0.3s;
   height: 60px;
-  display: flex
-;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  transition: 1s;
-  will-change: transform;
 }
 
 .logo.active {
@@ -93,7 +84,7 @@ width: auto;
 
 
 @media (min-width: 1024px) {
-  #padrtners .partners {
+  #partners .partners {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;

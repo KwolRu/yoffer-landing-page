@@ -1,5 +1,6 @@
 .header {
-  background-color: #fff;
+  background-color: #ffffff10;
+  backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
   left: 0;
@@ -53,7 +54,6 @@
 .nav-item a:hover {
   color: var(--indigo-500);
 }
-
 
 
 .nav-item.active a {
@@ -252,7 +252,6 @@ z-index: 9999;
     margin: 20px 0;
   }
   
-  /* Close button in sidebar */
   .sidebar-close {
     position: absolute;
     top: 20px;

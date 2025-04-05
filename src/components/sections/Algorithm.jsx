@@ -26,19 +26,22 @@ const Algorithm = () => {
     return () => window.removeEventListener('resize', checkIfDesktop);
   }, []);
   
-  // Sample algorithm steps data
+  // Sample algorithm steps data with unique image for each step
   const algorithmSteps = [
     {
       id: 1,
       title: "Создаст персональное резюме",
+      imgSrc: "/img/svg/heart.svg"
     },
     {
       id: 2,
       title: "Выделит ваши сильные стороны",
+      imgSrc: "/img/svg/like.svg"
     },
     {
       id: 3,
       title: "<span>Привлечет работодателей</span> <span>уже через несколько часов</span>",
+      imgSrc: "/img/svg/time.svg"
     }
   ];
 
@@ -54,7 +57,7 @@ const Algorithm = () => {
                 <div key={`step-${step.id}`} className="algorithm-card">
                   <p className='col' dangerouslySetInnerHTML={{ __html: step.title }}></p>
                   <div className='like'>
-                    <img src="/img/svg/like.svg" alt="" />
+                    <img src={step.imgSrc} alt="" />
                   </div>
                 </div>
               ))}
@@ -91,7 +94,7 @@ const Algorithm = () => {
                   <div className="algorithm-card">
                     <p dangerouslySetInnerHTML={{ __html: step.title }}></p>
                     <div className='like'>
-                      <img src="/img/svg/like.svg" alt="" />
+                      <img src={step.imgSrc} alt="" />
                     </div>
                   </div>
                 </SwiperSlide>
@@ -106,3 +109,4 @@ const Algorithm = () => {
 };
 
 export default Algorithm;
+

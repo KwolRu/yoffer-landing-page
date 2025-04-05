@@ -1,6 +1,6 @@
 .tracking-system-section {
   padding: 40px 0;
-  background-color: white;
+  background-color: var(--gray-50);
 }
 
 .tracking-image {
@@ -15,7 +15,9 @@
   opacity: 1;
   visibility: visible;
 }
-
+.semibold{
+  font-weight: 600;
+}
 .tracking-text .card {
   text-align: center;
   border-radius: 40px;

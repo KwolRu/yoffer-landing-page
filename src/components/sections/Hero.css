@@ -101,8 +101,9 @@
 @media (min-width: 1024px) {
   .hero-section {
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     justify-content: space-between;
+    border-bottom: 2px solid var(--indigo-300);
   }
 
   #home .container {
@@ -110,7 +111,10 @@
     overflow: visible;
     align-items: center;
   }
-
+  .left_chat_anim {
+    margin: -20px 0px;
+  }
+  
   .hero-section {
     height: auto;
 
@@ -132,11 +136,10 @@
   .hero-chat {
     position: absolute;
     bottom: 20px;
-    width: 340px;
+    width: 480px;
     justify-self: anchor-center;
-  }
+}
 
-  .hero-image img {
-    transform: scale(1.1);
-  }
+
+
 }

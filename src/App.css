@@ -182,10 +182,11 @@ position: relative;
   width: 100%;
   position: absolute;
   height: 4px;
-  background-color: var(--indigo-300);
+  background-color: var(--indigo-100);
   margin-top: -8px;
   z-index: -1;
 }
+::after
 .desktop{ 
   display: none;
 }

@@ -45,7 +45,7 @@ const TimelineSection = () => {
           <div className="timeline-item">
             <div className="timeline-number">2</div>
             <div className="timeline-content">
-              <p>Ответьте на уточняющие вопросы</p>
+              <p className='col'><span>Ответьте на уточняющие </span><span>вопросы</span></p>
               <div className="timeline-image phone">
                 <img src="/img/timeline.png" alt="Уточняющие вопросы" />
               </div>
@@ -56,7 +56,7 @@ const TimelineSection = () => {
             <div className="timeline-number">3</div>
             <div className="timeline-content">
               <p className='col'>
-                <span>Заберите готовое резюме,</span><span> которое алгоритм составит</span><span> <span>на основе ваших компетенций</span> и требований по интересующей </span><span>вакансии</span>
+                <span>Заберите готовое резюме,</span><span> которое алгоритм составит</span> <span>на основе ваших компетенций</span><span> и требований по интересующей </span><span>вакансии</span>
               </p>
             </div>
           </div>

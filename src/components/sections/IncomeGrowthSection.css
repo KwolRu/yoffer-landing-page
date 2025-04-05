@@ -43,6 +43,9 @@
   font-weight: 500;
   margin-top: 40px;
 }
+.income-description span::after{
+  margin-top: -6px;
+}
 
 /* Circle grid layout similar to Features section */
 .circle-grid {

@@ -12,7 +12,9 @@
 .footer-logo {
   margin-bottom: 20px;
 }
-
+.footer-center p {
+  color: var(--gray-600);
+}
 .footer-logo h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -27,13 +29,15 @@
 .footer-links ul {
   list-style: none;
 }
-
+.footer .footer-header p{
+ color: var(--gray-400);
+}
 .footer-links li {
   margin-bottom: 10px;
 }
 
 .footer-links a {
-  color: #ccc;
+  color: var(--gray-400);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -70,7 +74,7 @@
 }
 .footer p {
   font-size: 14px;
-  color: var(--gray-400);
+  color: var(--gray-600);
   margin: 0;
   font-weight: 500;
   margin-bottom: 4px;

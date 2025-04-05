@@ -16,12 +16,12 @@ const Partners = () => {
   const [logos, setLogos] = useState([]);
   
   useEffect(() => {
-    // Dynamically import all logo files from the directory
+    // Dynamically import all logo files from the directory and subdirectories
     const importAllLogos = () => {
       let logoContext;
       try {
-        // For webpack environments
-        logoContext = require.context('../../../public/img/logos', false, /\.(png|jpe?g|svg)$/);
+        // For webpack environments - true for recursive subdirectory search
+        logoContext = require.context('../../../public/img/logos', true, /\.png$/);
         return logoContext.keys().map(logoContext);
       } catch (error) {
         console.error('Error loading logos:', error);

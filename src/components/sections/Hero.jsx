@@ -17,8 +17,8 @@ const Hero = () => {
         <img className='img-anim desktop' src="/img/clear_phone_d.png" alt="Hero" />
         <img className='img-anim phone' src="/img/clear_phone.png" alt="Hero" />
         <div className='hero-chat'>
-          <img className='left_chat_anim' src="/img/ChatWhite.png" alt="Hero" />
           <img className='right_chat_anim' src="/img/ChatViolet.png" alt="Hero" />
+          <img className='left_chat_anim' src="/img/ChatWhite.png" alt="Hero" />
         </div>
       </div>
     </Section>

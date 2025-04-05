@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
                                     <div className="testimonial-header">
                                         <div className="testimonial-author">
                                             <div className="author-info">
-                                                <h4>{testimonial.name}</h4>
+                                                <h4 сlassName="testimonial-name">{testimonial.name}</h4>
                                                 <p className="testimonial-position">{testimonial.position}</p>
                                             </div>
                                             <div className="testimonial-avatar">
